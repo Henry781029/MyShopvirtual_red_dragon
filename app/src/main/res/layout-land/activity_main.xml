@@ -5,13 +5,13 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/tvmensaje1"
-        android:layout_width="339dp"
+        android:layout_width="486dp"
         android:layout_height="59dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
@@ -20,33 +20,31 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
-
+        app:layout_constraintVertical_bias="0.045" />
 
     <EditText
         android:id="@+id/etemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="465dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="216dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/etpassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmensaje1"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="288dp"
+        android:layout_width="462dp"
+        android:layout_height="61dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
@@ -55,14 +53,15 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etemail"
+        app:layout_constraintVertical_bias="0.103" />
 
     <Button
         android:id="@+id/btiniciar"
-        android:layout_width="253dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
         android:onClick="login"
@@ -70,18 +69,18 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="25dp"
         app:iconTint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btregistrar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmensaje1"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toEndOf="@+id/btregistrar"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword"
+        app:layout_constraintVertical_bias="0.728" />
 
     <Button
         android:id="@+id/btregistrar"
-        android:layout_width="258dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="76dp"
+        android:layout_width="227dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="136dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
         android:onClick="Register"
@@ -89,19 +88,20 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword"
+        app:layout_constraintVertical_bias="0.728" />
 
     <ImageView
         android:id="@+id/ivimagen1"
-        android:layout_width="163dp"
-        android:layout_height="157dp"
+        android:layout_width="224dp"
+        android:layout_height="405dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/red_dragon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

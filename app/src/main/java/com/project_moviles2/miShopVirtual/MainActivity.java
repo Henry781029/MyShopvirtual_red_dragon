@@ -9,19 +9,27 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.project_moviles2.miShopVirtual.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ActivityMainBinding mainBinding;
 
     TextView jtvmensaje1;
     EditText jetemail, jetpassword;
     Button jbtiniciar, jbtregistrar;
+    ImageView jivimagen1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = mainBinding.getRoot();
+        setContentView(view);
 
         getSupportActionBar().hide();
 
@@ -30,10 +38,13 @@ public class MainActivity extends AppCompatActivity {
         jetpassword=findViewById(R.id.etpassword);
         jbtiniciar=findViewById(R.id.btiniciar);
         jbtregistrar=findViewById(R.id.btregistrar);
+        jivimagen1 =findViewById(R.id.ivimagen1);
 
         Animation animation1= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.desplazamiento_abajo);
+        Animation animation2= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.desplazamiento_abajo);
 
         jtvmensaje1.setAnimation(animation1);
+        jivimagen1.setAnimation(animation2);
 
     }
     public void login (View view){
