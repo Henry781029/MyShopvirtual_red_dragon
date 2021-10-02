@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "421972288922",
+    "project_id": "myshopvirtual-red-dragon",
+    "storage_bucket": "myshopvirtual-red-dragon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421972288922:android:a7a25900812da70fbcc623",
+        "android_client_info": {
+          "package_name": "com.myshopvirtual.Appreddragon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421972288922-lbqtct0ukkm1fq2pknelqombpj0u5nf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnfoR71FFq0KPnPq9SuhzNpT0xBRq-t6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421972288922-lbqtct0ukkm1fq2pknelqombpj0u5nf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
