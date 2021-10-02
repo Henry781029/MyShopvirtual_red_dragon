@@ -1,240 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".shop_register">
 
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.009">
 
-        <TextView
-            android:id="@+id/tvmensaje2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fontFamily="@font/aladin"
-            android:textSize="30dp"
-            android:textColor="#F44336"
-            android:gravity="center"
-            android:text="REGISTRO" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvmensaje2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="REGISTRO"
+        android:textColor="#F44336"
+        android:textSize="30dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
-        app:layout_constraintVertical_bias="0.02">
 
-        <EditText
-            android:id="@+id/etname"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/aladin"
-            android:ems="10"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:inputType="textPersonName"
-            android:hint="Name" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textSize="20dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-        app:layout_constraintVertical_bias="0.028">
 
-        <EditText
-            android:id="@+id/etemailregister"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fontFamily="@font/aladin"
-            android:ems="10"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etemailregister"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
-        app:layout_constraintVertical_bias="0.024">
 
-        <EditText
-            android:id="@+id/etcountry"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:fontFamily="@font/aladin"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:hint="Country"
-            android:inputType="textPersonName" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etcountry"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Country"
+        android:inputType="textPersonName"
+        android:textSize="20dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout11"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
-        app:layout_constraintVertical_bias="0.033">
 
-        <EditText
-            android:id="@+id/etcity"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:fontFamily="@font/aladin"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:hint="City"
-            android:inputType="textPersonName" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etcity"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="City"
+        android:inputType="textPersonName"
+        android:textSize="20dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout12"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
-        app:layout_constraintVertical_bias="0.032">
+    <EditText
+        android:id="@+id/etpassword2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/etpassword2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:fontFamily="@font/aladin"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:hint="Password"
-            android:inputType="textPassword" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout13"
-        android:layout_width="409dp"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout12"
-        app:layout_constraintVertical_bias="0.058">
+    <EditText
+        android:id="@+id/etrole"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Role"
+        android:inputType="textPersonName"
+        android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/etrole"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:fontFamily="@font/aladin"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:hint="Role"
-            android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/etshop"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="2"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Shop"
+        android:inputType="textPersonName"
+        android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/etshop"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/aladin"
-            android:ems="10"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:hint="Shop"
-            android:inputType="textPersonName" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout14"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
-        app:layout_constraintVertical_bias="0.208">
+    <Button
+        android:id="@+id/btregistro"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:onClick="Registrar"
+        android:text="Registrarse"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/btregistro"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fontFamily="@font/aladin"
-            android:gravity="center"
-            android:onClick="Registrar"
-            android:text="Registrarse"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
-        app:layout_constraintVertical_bias="0.184">
+    <Button
+        android:id="@+id/btregresar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:onClick="Back"
+        android:text="Regresar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/btregresar"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fontFamily="@font/aladin"
-            android:onClick="Back"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:text="Regresar" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
