@@ -1,137 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".shop_register">
 
 
     <TextView
         android:id="@+id/tvmensaje2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="1"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="60dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
         android:text="REGISTRO"
         android:textColor="#F44336"
-        android:textSize="30dp" />
-
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etname"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="366dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.199" />
 
 
     <EditText
         android:id="@+id/etemailregister"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="366dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        android:textSize="20dp" />
-
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
 
     <EditText
         android:id="@+id/etcountry"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="Country"
         android:inputType="textPersonName"
-        android:textSize="20dp" />
-
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword2"
+        app:layout_constraintVertical_bias="0.044" />
 
     <EditText
         android:id="@+id/etcity"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="City"
         android:inputType="textPersonName"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etcountry"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpassword2"
+        app:layout_constraintVertical_bias="0.044" />
 
     <EditText
         android:id="@+id/etpassword2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="366dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textSize="20dp" />
-
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etemailregister" />
 
     <EditText
         android:id="@+id/etrole"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="366dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="Role"
         android:inputType="textPersonName"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.549" />
 
     <EditText
         android:id="@+id/etshop"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="2"
+        android:layout_width="366dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/aladin"
         android:gravity="left"
         android:hint="Shop"
         android:inputType="textPersonName"
-        android:textSize="20dp" />
-
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
 
     <Button
         android:id="@+id/btregistro"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="1"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
         android:onClick="Registrar"
         android:text="Registrarse"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp" />
-
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
 
     <Button
         android:id="@+id/btregresar"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="1"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
         android:onClick="Back"
         android:text="Regresar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btregistro"
+        app:layout_constraintVertical_bias="0.191" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvmensaje2"
+        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red_dragon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

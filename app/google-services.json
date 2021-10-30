@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "421972288922",
-    "project_id": "myshopvirtual-red-dragon",
-    "storage_bucket": "myshopvirtual-red-dragon.appspot.com"
+    "project_number": "108037710373",
+    "project_id": "shopvirtualrd",
+    "storage_bucket": "shopvirtualrd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:421972288922:android:a7a25900812da70fbcc623",
+        "mobilesdk_app_id": "1:108037710373:android:2e54f4be12ca8af20a95cc",
         "android_client_info": {
-          "package_name": "com.myshopvirtual.Appreddragon"
+          "package_name": "com.project_moviles2.miShopVirtual"
         }
       },
       "oauth_client": [
         {
-          "client_id": "421972288922-lbqtct0ukkm1fq2pknelqombpj0u5nf2.apps.googleusercontent.com",
+          "client_id": "108037710373-8322bhhhjcd78i0ohee6dnml4a4j9oaj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAnfoR71FFq0KPnPq9SuhzNpT0xBRq-t6w"
+          "current_key": "AIzaSyBZy-uH0g_FGya78hAD__RLvkxELHn1mU0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "421972288922-lbqtct0ukkm1fq2pknelqombpj0u5nf2.apps.googleusercontent.com",
+              "client_id": "108037710373-8322bhhhjcd78i0ohee6dnml4a4j9oaj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
