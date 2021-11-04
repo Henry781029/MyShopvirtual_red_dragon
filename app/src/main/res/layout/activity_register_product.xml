@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_on_primary_emphasis_medium"
+    tools:context=".Register_product">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/aladin"
+        android:gravity="center"
+        android:text="REGISTER PRODUCT"
+        android:textColor="#F44336"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <EditText
+        android:id="@+id/etid"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="ID"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/etname2"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <EditText
+        android:id="@+id/etstock"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:gravity="left"
+        android:hint="Stock"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <EditText
+        android:id="@+id/etcategory"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Category"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.337" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="406dp"
+        android:layout_height="390dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/red_dragon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
