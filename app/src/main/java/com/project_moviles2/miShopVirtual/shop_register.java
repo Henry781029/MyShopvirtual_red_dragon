@@ -9,14 +9,22 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class shop_register extends AppCompatActivity {
 
     TextView jtvmensaje2;
     EditText jetname, jetemailregister, jetcountry, jetcity, jetpassword2, jetrole, jetshop;
     Button jbtregistro, jbtregresar;
+    RadioButton jrbuser, jrbseller;
+    ImageView jivimagen2;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +39,20 @@ public class shop_register extends AppCompatActivity {
         jetcountry=findViewById(R.id.etcountry);
         jetcity=findViewById(R.id.etcity);
         jetpassword2=findViewById(R.id.etpassword2);
-        jetrole=findViewById(R.id.etrole);
+        jrbuser = findViewById(R.id.rbuser);
+        jrbseller = findViewById(R.id.rbseller);
         jetshop=findViewById(R.id.etshop);
         jbtregistro=findViewById(R.id.btregistro);
         jbtregresar=findViewById(R.id.btregresar);
+        jivimagen2=findViewById(R.id.ivimagen2);
 
         jbtregistro.setCursorVisible(false);
 
         Animation animation1= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.desplazamiento_abajo);
+        Animation animation2= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.opaco);
 
         jtvmensaje2.setAnimation(animation1);
+        jivimagen2.setAnimation(animation2);
 
     }
     public void Registrar (View view){

@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="275dp"
-        android:layout_height="40dp"
+        android:layout_width="281dp"
+        android:layout_height="43dp"
         android:fontFamily="@font/aladin"
         android:gravity="center"
         android:text="REGISTER PRODUCT"
@@ -85,8 +85,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="406dp"
-        android:layout_height="390dp"
+        android:layout_width="411dp"
+        android:layout_height="389dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
