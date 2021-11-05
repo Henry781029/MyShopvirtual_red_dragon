@@ -1,9 +1,11 @@
 package com.project_moviles2.miShopVirtual;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,6 +15,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.project_moviles2.miShopVirtual.databinding.ActivityMainBinding;
 
@@ -49,21 +55,81 @@ public class MainActivity extends AppCompatActivity {
         jtvmensaje1.setAnimation(animation1);
         jivimagen1.setAnimation(animation2);
 
+        String email_retorno=getIntent().getStringExtra("coleccion");
+        if(email_retorno == null){
+            jetemail.setText("");
+        }else{
+            jetemail.setText(email_retorno);
+        }
+
     }
     public void login (View view){
-        String email = null, password = null;
+       final String email, Password ;
 
         email=jetemail.getText().toString();
-        password=jetpassword.getText().toString();
+        Password=jetpassword.getText().toString();
 
         if(email.isEmpty()){
             Toast.makeText(getApplicationContext(), "Email no ingresado.", Toast.LENGTH_SHORT).show();
             jetemail.requestFocus();
-        }else if(password.isEmpty()){
+        }else if(Password.isEmpty()){
             Toast.makeText(getApplicationContext(), "Debe ingresar la contraseña.", Toast.LENGTH_SHORT).show();
             jetpassword.requestFocus();
         }else{
-            Toast.makeText(getApplicationContext(), "Ha ingresado correctamente", Toast.LENGTH_SHORT).show();
+            DocumentReference docRef = db.collection("users").document(email);
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            Log.d("Mensaje1", "DocumentSnapshot data: " + document.getData());
+                            String password = document.getString("Password");
+
+                            if (password.equals(Password)) {
+                                String rol = document.getString("Rol");
+                                if (rol.equals("Seller")){
+                                    Intent intent = new Intent(getApplicationContext(), View_UserSeller.class);
+                                    intent.putExtra("coleccion", email);
+                                    intent.putExtra("rol", rol);
+                                    intent.putExtra("password", password);
+                                    //guardarPreferencias();
+                                    startActivity(intent);
+                                }
+                                else if (rol.equals("user")){
+                                    Intent intent = new Intent(getApplicationContext(), View_User.class);
+                                    intent.putExtra("coleccion", email);
+                                    intent.putExtra("rol", rol);
+                                    intent.putExtra("password", password);
+                                    startActivity(intent);
+                                }
+                                jetpassword.setText("");
+
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                                jetpassword.setText("");
+                                jetpassword.requestFocus();
+                            }
+
+                        } else {
+                            Log.d("mensaje2", "No such document");
+                            Toast.makeText(getApplicationContext(), "Usuario no extiste, por favor confirmar", Toast.LENGTH_LONG).show();
+
+                            jetemail.requestFocus();
+                            jetpassword.setText("");
+                        }
+                    } else {
+
+                        Log.d("Mensaje3", "get failed with ", task.getException());
+                        //Toast.makeText(getApplicationContext(), "Usuario no extiste, por favor confirmar", Toast.LENGTH_LONG).show();
+
+                        jetemail.requestFocus();
+                        jetpassword.setText("");
+                    }
+
+                }
+                
+            });
         }
     }
 

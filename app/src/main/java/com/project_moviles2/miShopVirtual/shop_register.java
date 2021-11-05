@@ -176,7 +176,7 @@ public class shop_register extends AppCompatActivity {
                                         public void onSuccess(Void aVoid) {
                                             Log.d("Registro ok", "DocumentSnapshot successfully written!");
                                             Toast.makeText(getApplicationContext(), "El Registro de Usuario se ha realizado correctamente", Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(getApplicationContext(),View_UserSeller.class);
+                                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 
                                             intent.putExtra("coleccion", emailregister);
                                             startActivity(intent);

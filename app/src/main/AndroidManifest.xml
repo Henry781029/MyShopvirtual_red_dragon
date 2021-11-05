@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiShopVirtual">
         <activity
+            android:name=".View_User"
+            android:exported="false" />
+        <activity
             android:name=".View_UserSeller"
             android:exported="false" />
         <activity
